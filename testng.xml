@@ -12,13 +12,13 @@
 			<class name="com.ecommerce.testcases.EcommerceLaunchPageTest"></class>
 		</classes>
 	</test>
-	<test name="Firefox Execution in Localhost">
+<!-- 	<test name="Firefox Execution in Localhost">
 		<parameter name="browser" value="firefox" />
 		<parameter name="locale" value="local" />
 		<classes>
 			<class name="com.ecommerce.testcases.EcommerceLaunchPageTest"></class>
 		</classes>
-	</test>
+	</test> -->
 	<!-- <test name="Chrome Execution in Cloud">
 		<parameter name="browser" value="chrome" />
 		<parameter name="locale" value="cloud" />
@@ -33,13 +33,13 @@
 			<class name="com.ecommerce.testcases.EcommerceLaunchPageTest"></class>
 		</classes>
 	</test> -->
-	<test name="Chrome Execution in Remote">
+<!-- 	<test name="Chrome Execution in Remote">
 		<parameter name="browser" value="chrome" />
 		<parameter name="locale" value="remote" />
 		<classes>
 			<class name="com.ecommerce.testcases.EcommerceLaunchPageTest"></class>
 		</classes>
-	</test>
+	</test> -->
 	<test name="Firefox Execution in Remote">
 		<parameter name="browser" value="firefox" />
 		<parameter name="locale" value="remote" />
