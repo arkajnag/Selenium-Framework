@@ -14,7 +14,7 @@ RUN apk update && \
 	apk add unzip
 RUN wget https://repo1.maven.org/maven2/io/qameta/allure/allure-commandline/2.13.5/allure-commandline-2.13.5.zip
 RUN unzip allure-commandline-2.13.5.zip -d /allure
-RUN rm allure-commandline.zip
+RUN rm allure-commandline-2.13.5.zip
 ENV PATH="/allure/bin:${PATH}"
 ENV ALLURE_CONFIG="/allure-config/allure.properties"
 COPY pom.xml /ecommerce-selenium/pom.xml
