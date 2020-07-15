@@ -5,7 +5,7 @@
 	<listener class-name="com.ecommerce.Listeners.TestListener"/>
 	<listener class-name="com.ecommerce.Listeners.TestAnnotationTransformer"/>
 </listeners>
-<!-- 	<test name="Chrome Execution in Localhost">
+	<test name="Chrome Execution in Localhost">
 		<parameter name="browser" value="chrome" />
 		<parameter name="locale" value="local" />
 		<classes>
@@ -18,7 +18,7 @@
 		<classes>
 			<class name="com.ecommerce.testcases.EcommerceLaunchPageTest"></class>
 		</classes>
-	</test> -->
+	</test>
 	<!-- <test name="Chrome Execution in Cloud">
 		<parameter name="browser" value="chrome" />
 		<parameter name="locale" value="cloud" />
