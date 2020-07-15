@@ -10,7 +10,6 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -58,13 +57,11 @@ public class BaseDriverClass {
 							case "chrome":
 								DesiredCapabilities caps_chrome=DesiredCapabilities.chrome();
 								caps_chrome.setAcceptInsecureCerts(true);
-								caps_chrome.setCapability(CapabilityType.BROWSER_NAME, "CHROME");
 								setDriver(new RemoteWebDriver(new URL(getProps().getProperty("REMOTE_DOCKER_URL")), caps_chrome));
 								break;
 							case "firefox":
 								DesiredCapabilities caps_firefox=DesiredCapabilities.firefox();
 								caps_firefox.setAcceptInsecureCerts(true);
-								caps_firefox.setCapability(CapabilityType.BROWSER_NAME, "Firefox");
 								setDriver(new RemoteWebDriver(new URL(getProps().getProperty("REMOTE_DOCKER_URL")), caps_firefox));
 								break;
 							default:

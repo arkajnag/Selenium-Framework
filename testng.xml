@@ -19,8 +19,8 @@
 			<class name="com.ecommerce.testcases.EcommerceLaunchPageTest"></class>
 		</classes>
 	</test> -->
-	<test name="Chrome Execution in Cloud">
-<!-- 		<parameter name="browser" value="chrome" />
+	<!-- <test name="Chrome Execution in Cloud">
+		<parameter name="browser" value="chrome" />
 		<parameter name="locale" value="cloud" />
 		<classes>
 			<class name="com.ecommerce.testcases.EcommerceLaunchPageTest"></class>
@@ -41,7 +41,7 @@
 		</classes>
 	</test>
 	<test name="Firefox Execution in Remote">
-		<parameter name="browser" value="chrome" />
+		<parameter name="browser" value="firefox" />
 		<parameter name="locale" value="remote" />
 		<classes>
 			<class name="com.ecommerce.testcases.EcommerceLaunchPageTest"></class>
