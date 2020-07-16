@@ -9,6 +9,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
@@ -16,7 +17,7 @@ import org.testng.ITestResult;
 import com.ecommerce.baseClass.BaseDriverClass;
 import com.ecommerce.utilities.CommonUtilities;
 
-
+import io.qameta.allure.Attachment;
 
 public class TestListener implements ITestListener {
 	
@@ -49,7 +50,12 @@ public class TestListener implements ITestListener {
 			} catch (IOException e) {
 				e.printStackTrace();
 		}
-
+		attachScreenshotForFailureInAllure(BaseDriverClass.getDriver());	
+	}
+	
+	@Attachment(value="Screenshot",type="image/png")
+	public byte[] attachScreenshotForFailureInAllure(RemoteWebDriver driver){
+		return ((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES);
 	}
 
 	@Override

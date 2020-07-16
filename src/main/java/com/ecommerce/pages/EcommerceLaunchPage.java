@@ -5,13 +5,12 @@ import java.util.Map;
 import java.util.concurrent.TimeUnit;
 import java.util.function.Function;
 import java.util.function.Supplier;
-
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
-
 import com.ecommerce.baseClass.BaseDriverClass;
 import com.ecommerce.utilities.WebActionUtilities;
+
 
 public class EcommerceLaunchPage {
 
@@ -25,6 +24,7 @@ public class EcommerceLaunchPage {
 	// Page.
 	// Return a Map of having Key: Page Url and Object of
 	// EcommerceAuthenticatePage
+	
 	public Supplier<Map<String, Object>> fnc_ClickOnSignInLinkText = () -> {
 		try {
 			logger.info("Test Method to Click On Sign In Link started");
