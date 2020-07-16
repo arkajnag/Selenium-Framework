@@ -1,17 +1,23 @@
 package com.ecommerce.baseClass;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.net.URL;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 import java.util.function.BiConsumer;
 import java.util.function.Consumer;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.ThreadContext;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
+
+
+
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseDriverClass {
@@ -45,6 +51,13 @@ public class BaseDriverClass {
 	//LambdaTest for setting up Cloud Testing
 	public static BiConsumer<String, String> setUpDriver = (browserName, locale)-> {
 			try {
+				String logfilePath="Logs"+File.separator+CommonUtilities.formattedDateString.apply("dd-MM-yyyy-hh-mm-ss")+File.separator+locale+File.separator+browserName;
+				File logFile=new File(logfilePath);
+				synchronized (logFile) {
+					if(!logFile.exists())
+						logFile.mkdirs();
+				}
+				ThreadContext.put("ROUTINGKEY", logfilePath);
 				logger.info("Execution started to set up the Selenium Test Driver");
 				setProps(new Properties());
 				FileInputStream fis=new FileInputStream(System.getProperty("user.dir")+"/src/main/java/com/ecommerce/config/config.properties");
