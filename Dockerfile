@@ -20,4 +20,4 @@ ENV ALLURE_CONFIG="/allure-config/allure.properties"
 COPY pom.xml /ecommerce-selenium/pom.xml
 COPY src /ecommerce-selenium/src
 COPY target/ecommerce-selenium-0.0.1-SNAPSHOT.jar /ecommerce-selenium/target/ecommerce-selenium-0.0.1-SNAPSHOT.jar
-
+COPY testng.xml /ecommerce-selenium/testng.xml
